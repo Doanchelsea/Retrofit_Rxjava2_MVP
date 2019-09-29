@@ -8,5 +8,4 @@ public interface MainView {
     void onSuccess();
     void onFailure(String error);
     void OnGetResult(List<Get> gets);
-    void PostResult(String name, String lop);
 }

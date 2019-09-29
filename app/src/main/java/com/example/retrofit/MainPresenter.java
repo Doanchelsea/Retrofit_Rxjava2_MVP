@@ -24,9 +24,12 @@ public class MainPresenter {
                 .subscribeOn(Schedulers.io())
                 .subscribe(this::handleResponse2, this::handleErrorError));
     }
+
     public void  postData(String name, String lop){
+
         CompositeDisposable compositeDisposable = new CompositeDisposable();
-        compositeDisposable.add(PolyRetrofit.getInstance().postUser(name,lop,"","","")
+        compositeDisposable.add(PolyRetrofit.getInstance()
+                .postUser(name,lop,"","","")
                 .observeOn(AndroidSchedulers.mainThread())
                 .subscribeOn(Schedulers.io())
                 .subscribe(this::handleResponse1, this::handleErrorError));

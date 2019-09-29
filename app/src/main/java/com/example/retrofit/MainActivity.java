@@ -92,8 +92,4 @@ public class MainActivity extends AppCompatActivity  implements MainView{
         recyView.setAdapter(NhAdapter);
     }
 
-    @Override
-    public void PostResult(String name, String lop) {
-
-    }
 }
